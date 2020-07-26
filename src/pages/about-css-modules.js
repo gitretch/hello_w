@@ -2,15 +2,15 @@ import React from "react"
 import Container from "../components/container"
 import styles from  "./about-css-modules.module.css"
 
-const User = props => {
+const User = props => (
     <div className={styles.user}>
-        <im src={props.avataor} className={styles.avatar} alt=""/>
+        <img src={props.avataor} className={styles.avatar} alt=""/>
         <div className={styles.description}>
-        <h2 className={styles.username}>props.username</h2>
+        <h2 className={styles.username}>{props.username}</h2>
         <p className={styles.excerpt}>{props.excerpt}</p>
         </div>
     </div>
-}
+)
 export default function About() {
     console.log(styles)
     return (
